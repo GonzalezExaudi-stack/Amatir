@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interaktif - Dokumentasi Goa Kaca</title>
+    <link rel="stylesheet" href="my.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="app-wrapper">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <h3>Goa Kaca</h3>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#step1" class="nav-item"><span>01</span> Deskripsi</a></li>
+                <li><a href="#step2" class="nav-item"><span>02</span> Aktor</a></li>
+                <li><a href="#step3" class="nav-item"><span>03</span> Use Case</a></li>
+                <li><a href="#step4" class="nav-item"><span>04</span> Hubungan</a></li>
+                <li><a href="#step5" class="nav-item"><span>05</span> Diagram</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- STEP 1: DESKRIPSI -->
+            <section id="step1" class="section-card">
+                <div class="step-tag">Step 1</div>
+                <h2>Deskripsi Sistem</h2>
+                <div class="text-block">
+                    <p>Website promosi wisata Goa kaca ini dibuat sebagai media informasi dan promosi untuk memperkenalkan keindahan alam serta potensi wisata yang dimiliki oleh Goa Kaca kepada masyarakat luas baik lokal maupun pengunjung. Goa Kaca adalah destinasi wisata alam unggulan yang menawarkan keunikan fenomena yang sangat langka yaitu dengan kejernihan air yang dimiliki. Terletak di kawasan yang masih asri, goa ini menjadi rumah bagi ekosistem yang terjaga dan menawarkan pengalaman eksplorasi yang menenangkan sekaligus memukau bagi para pecinta alam dan fotografer.</p>
+                </div>
+            </section>
+
+            <!-- STEP 2: AKTOR -->
+            <section id="step2" class="section-card">
+                <div class="step-tag">Step 2</div>
+                <h2>Identifikasi Aktor</h2>
+                <div class="actor-grid">
+                    <div class="actor-item primary-actor">
+                        <span class="role-badge primary">Primary Actor</span>
+                        <h3>Pengunjung</h3>
+                        <p>Pengguna akhir yang melihat informasi wisata. Aktor utama dengan interaksi paling banyak pada sistem.</p>
+                    </div>
+                    <div class="actor-item secondary-actor">
+                        <span class="role-badge secondary">Secondary Actor</span>
+                        <h3>Admin</h3>
+                        <p>Pengelola platform yang memverifikasi mitra, manajemen konten, transaksi, dan pesan.</p>
+                    </div>
+                    <div class="actor-item fourth-actor">
+                        <span class="role-badge fourth">Third Actor</span>
+                        <h3>Mitra Lokal</h3>
+                        <p>Mitra bisnis yang memberi informasi teknis dan penanganan masalah lapangan.</p>
+                    </div>
+                    <div class="actor-item external-actor">
+                        <span class="role-badge external">External System</span>
+                        <h3>Payment</h3>
+                        <p>Gateway internal yang memproses transaksi pembayaran secara otomatis secara mandiri.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- STEP 3: USE CASE -->
+            <section id="step3" class="section-card">
+                <div class="step-tag">Step 3</div>
+                <h2>Identifikasi Use Case</h2>
+                <div class="uc-layout">
+                    <div class="uc-category user-side">
+                        <h4>Fungsional Pengunjung</h4>
+                        <ul>
+                            <li>Login/Logout kedalam web</li>
+                            <li>Lihat Halaman Utama & Galeri</li>
+                            <li>Baca Informasi Fasilitas</li>
+                            <li>Melihat Peta Lokasi</li>
+                            <li>Registrasi Akun & Reservasi</li>
+                            <li>Berikan Ulasan</li>
+                        </ul>
+                    </div>
+                    <div class="uc-category admin-side">
+                        <h4>Fungsional Admin</h4>
+                        <ul>
+                            <li>Login/Logout kedalam web</li>
+                            <li>Manajemen Konten & Pesan</li>
+                            <li>Memantau Arus Transaksi</li>
+                        </ul>
+                    </div>
+                    <div class="uc-category mitra-side">
+                        <h4>Mitra</h4>
+                        <ul>
+                            <li>Login/Logout kedalam web</li>
+                            <li>Penyediaan Layanan Guide</li>
+                            <li>Penanganan Masalah</li>
+                        </ul>
+                    </div>
+                     <div class="uc-category payment-side">
+                        <h4>Fungsional Payment</h4>
+                        <ul>
+                            <li>Proses Payment</li>
+                            <li>Konfirmasi Payment</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- STEP 4: HUBUNGAN -->
+            <section id="step4" class="section-card">
+                <div class="step-tag">Step 4</div>
+                <h2>Hubungan (Relationship)</h2>
+                <div class="relation-container">
+                    <div class="rel-box association">
+                        <strong>Association</strong>
+                        <li>Pengunjung - Login</li>
+                        <li>Pengunjung - Pesan Tiket</li>
+                        <li>Pengunjung - Terima Pesanan</li>
+                    </div>
+                    <div class="rel-box include">
+                        <strong>Include (Wajib)</strong>
+                        <li>Buat Pesanan &rarr; Layanan</li>
+                        <li>Bayar &rarr; Proses Bayar</li>
+                        <li>Login &rarr; Validasi</li>
+                    </div>
+                    <div class="rel-box extend">
+                        <strong>Extend (Opsional)</strong>
+                        <li>Batalkan Pesanan</li>
+                        <li>Memberikan Ulasan Wisata</li>
+                    </div>
+                </div>
+            </section>
+
+
+             <section id="step5" class="section-card">
+                <div class="step-tag">Step 5</div>
+                <h2>Hubungan (Relationship)</h2>
+                <img src="gambargacor.jpg" alt="gambar error">
+                
+            </section>
+        </main>
+    </div>
+</body>
+</html>
